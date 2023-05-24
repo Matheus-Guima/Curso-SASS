@@ -1,0 +1,38 @@
+// Ctrl + Ship + P > Live Sass: Watch Sass
+$cor-principal: #068DA9;
+$cor-secundaria: #ECF8F9;
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin cor-texto($cor-de-fundo, $cor-texto) {
+    width: 50%;
+    background-color: $cor-de-fundo;
+    .texto {
+        margin-top: 40%;
+        text-align: center;
+        font-size: 150px;
+        color: $cor-texto;
+    }
+}
+
+
+body {
+    @include reset();
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+
+    .esquerdo {
+        @include cor-texto( #068DA9, #ECF8F9);
+    }
+
+    .direito {
+        @include cor-texto( #ECF8F9, #068DA9);
+    }
+}
+
